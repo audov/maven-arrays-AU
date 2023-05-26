@@ -4,12 +4,14 @@ import java.util.stream.IntStream;
 
 public class StatsService {
     public int salesSumCalculate(int[] sales) {
-        int salesSum = IntStream.of(sales).sum();
+        int salesSum = sales[0] + sales[1] + sales[2] + sales[3] + sales[4] + sales[5] + sales[6] + sales[7] + sales[8] + sales[9] + sales[10] + sales[11];
+        //int salesSum = IntStream.of(sales).sum();
         return salesSum;
     }
 
     public int salesAverSumCalculate(int[] sales) {
-        int salesSumAver = IntStream.of(sales).sum() / sales.length;
+        int salesSumAver = (sales[0] + sales[1] + sales[2] + sales[3] + sales[4] + sales[5] + sales[6] + sales[7] + sales[8] + sales[9] + sales[10] + sales[11]) / sales.length;
+        //int salesSumAver = IntStream.of(sales).sum() / sales.length;
         return salesSumAver;
     }
 
