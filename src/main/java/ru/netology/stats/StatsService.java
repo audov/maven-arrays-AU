@@ -12,13 +12,9 @@ public class StatsService {
     }
 
     public int salesAverSumCalculate(int[] sales) {
-        int salesSum = 0;
+        StatsService service = new StatsService();
+        int salesSum = service.salesSumCalculate(sales);
         int salesSumAver;
-        for (int i = 0; i < sales.length; i++) {
-            if (sales[i] > 0) {
-                salesSum = salesSum + sales[i];
-            }
-        }
         salesSumAver = salesSum / sales.length;
         return salesSumAver;
     }
