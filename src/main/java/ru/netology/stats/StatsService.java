@@ -12,8 +12,7 @@ public class StatsService {
     }
 
     public int salesAverSumCalculate(int[] sales) {
-        StatsService service = new StatsService();
-        int salesSum = service.salesSumCalculate(sales);
+        int salesSum = salesSumCalculate(sales);
         int salesSumAver;
         salesSumAver = salesSum / sales.length;
         return salesSumAver;
@@ -40,9 +39,7 @@ public class StatsService {
     }
 
     public int qtyMonthSalesBelowAver(int[] sales) {
-        //int salesAverSum = IntStream.of(sales).sum() / sales.length;
-        StatsService service = new StatsService();
-        int salesAverSum = service.salesAverSumCalculate(sales);
+        int salesAverSum = salesAverSumCalculate(sales);
         int qtyMonthA = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] <= salesAverSum) {
@@ -53,9 +50,7 @@ public class StatsService {
     }
 
     public int qtyMonthSalesAboveAver(int[] sales) {
-        //int salesAverSum = IntStream.of(sales).sum() / sales.length;
-        StatsService service = new StatsService();
-        int salesAverSum = service.salesAverSumCalculate(sales);
+        int salesAverSum = salesAverSumCalculate(sales);
         int qtyMonthB = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] >= salesAverSum) {
